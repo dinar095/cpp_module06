@@ -2,6 +2,7 @@
 #define CPP_MODULE04_CONVERSION_HPP
 #include <iostream>
 #include <math.h>
+#include <climits>
 
 using std::string;
 using std::endl;
