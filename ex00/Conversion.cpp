@@ -34,17 +34,14 @@ double Conversion::toDouble() const {
 std::ostream& operator<<(std::ostream& out, const Conversion& src)
 {
 
-	if (!isnan(src.toFloat()) && !isprint(src.toChar()) && isalnum(src.toChar()))
+	if (!isnan(src.toFloat()) && !isprint(src.toChar()) && !isinf(src.toFloat()))
 		out << "char: Non displayable" << endl;
 	else if (isprint(src.toChar()))
 		out << "char:	" << src.toChar() << endl;
 	else
-	{
 		out << "char: impossible" << endl;
-		out << "LL: " << isalnum(src.toInt())<< endl;
-	}
 
-	if (isnan(src.toFloat()) || src.toFloat() > INT_MAX || src.toFloat() < INT_MIN)
+	if (isnan(src.toFloat()) || src.toFloat() >= 2147483646 || src.toFloat() <= -2147483648)
 		out << "int: impossible" << endl;
 	else
 		out << "int:	" << src.toInt() << endl;
