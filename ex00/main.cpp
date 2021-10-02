@@ -16,9 +16,5 @@ int main(int ac, char **av)
 	}
 	else
 		cout << "Error arguments" << endl;
-
-//	string tr = av[1];
-//	float f = atof(tr.c_str());
-//	cout << f << endl;
 	return 0;
 }

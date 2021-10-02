@@ -1,5 +1,5 @@
-NAME = conversion
-CLASS = Conversion
+NAME = serialize
+CLASS =
 HEADER = $(patsubst %,%.hpp,$(CLASS))
 FUNCTIONS = main $(CLASS)
 
